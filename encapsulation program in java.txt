@@ -1,0 +1,51 @@
+Employee.java
+
+package Task;
+
+public class Employee {
+    private String name;
+    private int street_no;
+    private String city;
+    private int pin;
+
+    public String getName(){
+        return name;
+    }
+    public int getStreet_No(){
+        return street_no;
+    }
+    public String getCity(){
+        return city;
+    }
+    public int getPin(){
+        return pin;
+    }
+    public void setName(String name , int street_no , String city, int pin) {
+        this.name = name;
+        this.street_no = street_no;
+        this.city = city;
+        this.pin = pin;
+    }
+
+
+    }
+
+FirstTask.java
+
+package Task;
+import java.util.*;
+public class FirstTask {
+    public static void main(String args[]){
+        Scanner sc = new Scanner(System.in);
+        String name = sc.next();
+        int street_no = sc.nextInt();
+        String city = sc.next();
+        int pin = sc.nextInt();
+        Employee employee = new Employee();
+        employee.setName(name,street_no,city,pin);
+        System.out.println(employee.getName() +" " + employee.getStreet_No() +" " + employee.getPin() + " " + employee.getCity());
+
+
+
+    }
+}
